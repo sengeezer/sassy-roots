@@ -2,89 +2,57 @@
 @import "base";
 
 
-/* ==========================================================================
-   Base
-   ========================================================================== */
+/* Base */
 
 body { }
 
-
-
-/* =============================================================================
-   Header
-   ========================================================================== */
+/* Header */
 
 #banner { }
 
 /* Fixed Topbar Navigation */
-body.top-navbar { padding-top: 60px; }
-body.admin-bar .navbar-fixed-top { top: 28px; }
 
+body {
+	&.top-navbar { padding-top: 60px; }
+	&.admin-bar .navbar-fixed-top { top: 28px; }
+}
 
-
-/* ==========================================================================
-   Content
-   ========================================================================== */
+/* Content */
 
 #content { }
 
-
-
-/* ==========================================================================
-   Primary Content
-   ========================================================================== */
+/* Primary Content */
 
 #main { }
 
-
-
-/* ==========================================================================
-   Sidebar
-   ========================================================================== */
+/* Sidebar */
 
 #sidebar { }
 
+/* Posts */
 
+.hentry {
+	header { }
+	time { }
+	p.byline { }
+	.entry-content { }
+	footer { }
+}
 
-/* ==========================================================================
-   Posts
-   ========================================================================== */
-
-.hentry header { }
-.hentry time { }
-.hentry p.byline { }
-.hentry .entry-content { }
-.hentry footer { }
-
-
-
-/* ==========================================================================
-   Footer
-   ========================================================================== */
+/* Footer */
 
 #content-info { }
 
-
-
-/* ==========================================================================
-   WordPress Generated Classes
-   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
-   ========================================================================== */
+/* WordPress Generated Classes, see: http://codex.wordpress.org/CSS#WordPress_Generated_Classes */
 
 .aligncenter { display: block; margin: 0 auto; }
 .alignleft { float: left; }
 .alignright { float: right; }
 figure.alignnone { margin-left: 0; margin-right: 0; }
 
-
-
-/* ==========================================================================
-   Media Queries
-   ========================================================================== */
+/* Media Queries */
 
 @media (max-width: 979px) {
-  /* Fix top padding when using the responsive grid with the fixed topbar */
-  body.top-navbar {
-    padding-top: 0;
-  }
+	/* Fix top padding when using the responsive grid with the fixed topbar */
+	body.top-navbar { padding-top: 0; }
 }
