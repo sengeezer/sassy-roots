@@ -12,6 +12,13 @@
 	background-color: $warningBackground;
 	border: 1px solid $warningBorder;
 	@include border-radius($baseBorderRadius);
+	// Specified for the h4 to prevent conflicts of changing $headingsColor
+	color: $warningText;
+	h4 {
+		margin: 0;
+		// Specified for the h4 to prevent conflicts of changing $headingsColor
+		color: $warningText;
+	}
 	// Adjust close link position
 	.close {
 		position: relative;
@@ -20,11 +27,6 @@
 		line-height: $baseLineHeight;
 	}
 }
-.alert, .alert h4 {
-	// Specified for the h4 to prevent conflicts of changing $headingsColor
-	color: $warningText;
-}
-.alert h4 { margin: 0; }
 
 // Alternate styles
 

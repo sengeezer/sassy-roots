@@ -5,19 +5,20 @@ Description: Used to style the TinyMCE editor
 
 @import "compass/css3";
 
-.clearfix { *zoom: 1; }
-.clearfix:before,
-.clearfix:after {
-	display: table;
-	content: "";
-	line-height: 0;
+.clearfix {
+	*zoom: 1;
+	&:before, &:after {
+		display: table;
+		content: "";
+		line-height: 0;
+	}
+	&:after { clear: both; }
 }
-.clearfix:after { clear: both; }
 
 .hide-text {
 	font: 0/0 a;
 	color: transparent;
-	text-shadow: none;
+	@include text-shadow(none);
 	background-color: transparent;
 	border: 0;
 }
@@ -218,7 +219,7 @@ blockquote {
 	}
 }
 
-q:before,
+q:before, 
 q:after,
 blockquote:before,
 blockquote:after { content: ""; }
