@@ -4,191 +4,171 @@
 
 
 // Global values
-// --------------------------------------------------
-
 
 // Grays
-// -------------------------
-$black:                 #000 !default;
-$grayDarker:            #222 !default;
-$grayDark:              #333 !default;
-$gray:                  #555 !default;
-$grayLight:             #999 !default;
-$grayLighter:           #eee !default;
-$white:                 #fff !default;
 
+$black: #000 !default;
+$grayDarker: #222 !default;
+$grayDark: #333 !default;
+$gray: #555 !default;
+$grayLight: #999 !default;
+$grayLighter: #eee !default;
+$white: #fff !default;
 
 // Accent colors
-// -------------------------
-$blue:                  #049cdb !default;
-$blueDark:              #0064cd !default;
-$green:                 #46a546 !default;
-$red:                   #9d261d !default;
-$yellow:                #ffc40d !default;
-$orange:                #f89406 !default;
-$pink:                  #c3325f !default;
-$purple:                #7a43b6 !default;
 
+$blue: #049cdb !default;
+$blueDark: #0064cd !default;
+$green: #46a546 !default;
+$red: #9d261d !default;
+$yellow: #ffc40d !default;
+$orange: #f89406 !default;
+$pink: #c3325f !default;
+$purple: #7a43b6 !default;
 
 // Scaffolding
-// -------------------------
-$bodyBackground:        $white !default;
-$textColor:             $grayDark !default;
 
+$bodyBackground: $white !default;
+$textColor: $grayDark !default;
 
 // Links
-// -------------------------
-$linkColor:             #08c !default;
-$linkColorHover:        darken($linkColor, 15%) !default;
+
+$linkColor: #08c !default;
+$linkColorHover: darken($linkColor, 15%) !default;
 
 
 // Typography
-// -------------------------
-$sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$serifFontFamily:       Georgia, "Times New Roman", Times, serif !default;
-$monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
-$baseFontSize:          14px !default;
-$baseFontFamily:        $sansFontFamily !default;
-$baseLineHeight:        20px !default;
-$altFontFamily:         $serifFontFamily !default;
+$sansFontFamily: "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$serifFontFamily: Georgia, "Times New Roman", Times, serif !default;
+$monoFontFamily: Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
-$headingsFontFamily:    inherit !default; // empty to use BS default, $baseFontFamily
-$headingsFontWeight:    bold !default;    // instead of browser default, bold
-$headingsColor:         inherit !default; // empty to use BS default, $textColor
+$baseFontSize: 14px !default;
+$baseFontFamily: $sansFontFamily !default;
+$baseLineHeight: 20px !default;
+$altFontFamily: $serifFontFamily !default;
+
+$headingsFontFamily: inherit !default; // empty to use BS default, $baseFontFamily
+$headingsFontWeight: bold !default;    // instead of browser default, bold
+$headingsColor: inherit !default; // empty to use BS default, $textColor
 
 
 // Social Media Colors
-// -------------------------
-$googlePlusRed:         #d34836 !default;
-$googlePlusDkGray:      #2d2d2d !default;
-$googlePlusLtGray:      #d2d2d2 !default;
-$facebook:              #3B5998 !default;
-$flickr:                #FE0883 !default;
-$foursquare:            #8FD400 !default;
-$instagram:             #4E433C !default;
-$linkedin:              #4875B4 !default;
-$tumblr:                #2B4964 !default;
-$twitter:               #33CCFF !default;
-$vimeo:                 #86B32D !default;
-$youtube:               #FF3333 !default;
-$pinterest:             #910101 !default;
 
+$googlePlusRed: #d34836 !default;
+$googlePlusDkGray: #2d2d2d !default;
+$googlePlusLtGray: #d2d2d2 !default;
+$facebook: #3B5998 !default;
+$flickr: #FE0883 !default;
+$foursquare: #8FD400 !default;
+$instagram: #4E433C !default;
+$linkedin: #4875B4 !default;
+$tumblr: #2B4964 !default;
+$twitter: #3CF !default;
+$vimeo: #86B32D !default;
+$youtube: #F33 !default;
+$pinterest: #910101 !default;
 
 // Component sizing
-// -------------------------
 // Based on 14px font-size and 20px line-height
 
-$fontSizeLarge:         $baseFontSize * 1.25; // ~18px
-$fontSizeSmall:         $baseFontSize * 0.85; // ~12px
-$fontSizeMini:          $baseFontSize * 0.75; // ~11px
+$fontSizeLarge: $baseFontSize * 1.25; // ~18px
+$fontSizeSmall: $baseFontSize * 0.85; // ~12px
+$fontSizeMini: $baseFontSize * 0.75; // ~11px
 
-$paddingLarge:          11px 19px !default; // 44px
-$paddingSmall:          2px 10px !default;  // 26px
-$paddingMini:           0px 6px !default;   // 22px
+$paddingLarge: 11px 19px !default; // 44px
+$paddingSmall: 2px 10px !default;  // 26px
+$paddingMini: 0px 6px !default;   // 22px
 
-$baseBorderRadius:      4px !default;
-$borderRadiusLarge:     6px !default;
-$borderRadiusSmall:     3px !default;
-
+$baseBorderRadius: 4px !default;
+$borderRadiusLarge: 6px !default;
+$borderRadiusSmall: 3px !default;
 
 // Tables
-// -------------------------
-$tableBackground:                   transparent !default; // overall background-color
-$tableBackgroundAccent:             #f9f9f9 !default; // for striping
-$tableBackgroundHover:              #f5f5f5 !default; // for hover
-$tableBorder:                       #ddd !default; // table and cell border
+
+$tableBackground: transparent !default; // overall background-color
+$tableBackgroundAccent: #f9f9f9 !default; // for striping
+$tableBackgroundHover: #f5f5f5 !default; // for hover
+$tableBorder: #ddd !default; // table and cell border
 
 // Buttons
-// -------------------------
-$btnBackground:                     $white !default;
-$btnBackgroundHighlight:            darken($white, 10%) !default;
-$btnBorder:                         #bbb !default;
 
-$btnPrimaryBackground:              $linkColor !default;
-$btnPrimaryBackgroundHighlight:     adjust-hue($btnPrimaryBackground, 20%) !default;
+$btnBackground: $white !default;
+$btnBackgroundHighlight: darken($white, 10%) !default;
+$btnBorder: #bbb !default;
 
-$btnInfoBackground:                 #5bc0de !default;
-$btnInfoBackgroundHighlight:        #2f96b4 !default;
+$btnPrimaryBackground: $linkColor !default;
+$btnPrimaryBackgroundHighlight: adjust-hue($btnPrimaryBackground, 20%) !default;
 
-$btnSuccessBackground:              #62c462 !default;
-$btnSuccessBackgroundHighlight:     #51a351 !default;
+$btnInfoBackground: #5bc0de !default;
+$btnInfoBackgroundHighlight: #2f96b4 !default;
 
-$btnWarningBackground:              lighten($orange, 15%) !default;
-$btnWarningBackgroundHighlight:     $orange !default;
+$btnSuccessBackground: #62c462 !default;
+$btnSuccessBackgroundHighlight: #51a351 !default;
 
-$btnDangerBackground:               #ee5f5b !default;
-$btnDangerBackgroundHighlight:      #bd362f !default;
+$btnWarningBackground: lighten($orange, 15%) !default;
+$btnWarningBackgroundHighlight: $orange !default;
 
-$btnInverseBackground:              #444 !default;
-$btnInverseBackgroundHighlight:     $grayDarker !default;
+$btnDangerBackground: #ee5f5b !default;
+$btnDangerBackgroundHighlight: #bd362f !default;
 
+$btnInverseBackground: #444 !default;
+$btnInverseBackgroundHighlight: $grayDarker !default;
 
 // Forms
-// -------------------------
-$inputBackground:               $white !default;
-$inputBorder:                   #ccc !default;
-$inputBorderRadius:             $baseBorderRadius !default;
-$inputDisabledBackground:       $grayLighter !default;
-$formActionsBackground:         #f5f5f5 !default;
-$inputHeight:                   $baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
 
+$inputBackground: $white !default;
+$inputBorder: #ccc !default;
+$inputBorderRadius: $baseBorderRadius !default;
+$inputDisabledBackground: $grayLighter !default;
+$formActionsBackground: #f5f5f5 !default;
+$inputHeight: $baseLineHeight + 10px; // base line-height + 8px vertical padding + 2px top/bottom border
 
 // Dropdowns
-// -------------------------
-$dropdownBackground:            $white !default;
-$dropdownBorder:                rgba(0,0,0,.2) !default;
-$dropdownDividerTop:            #e5e5e5 !default;
-$dropdownDividerBottom:         $white !default;
 
-$dropdownLinkColor:             $grayDark !default;
-$dropdownLinkColorHover:        $white !default;
-$dropdownLinkColorActive:       $dropdownLinkColor !default;
+$dropdownBackground: $white !default;
+$dropdownBorder: rgba(0,0,0,.2) !default;
+$dropdownDividerTop: #e5e5e5 !default;
+$dropdownDividerBottom: $white !default;
 
-$dropdownLinkBackgroundActive:  $linkColor !default;
-$dropdownLinkBackgroundHover:   $dropdownLinkBackgroundActive !default;
+$dropdownLinkColor: $grayDark !default;
+$dropdownLinkColorHover: $white !default;
+$dropdownLinkColorActive: $dropdownLinkColor !default;
 
-
+$dropdownLinkBackgroundActive: $linkColor !default;
+$dropdownLinkBackgroundHover: $dropdownLinkBackgroundActive !default;
 
 // COMPONENT VARIABLES
-// --------------------------------------------------
-
 
 // Z-index master list
-// -------------------------
 // Used for a bird's eye view of components dependent on the z-axis
 // Try to avoid customizing these :)
-$zindexDropdown:          1000 !default;
-$zindexPopover:           1010 !default;
-$zindexTooltip:           1030 !default;
-$zindexFixedNavbar:       1030 !default;
-$zindexModalBackdrop:     1040 !default;
-$zindexModal:             1050 !default;
-
+$zindexDropdown: 1000 !default;
+$zindexPopover: 1010 !default;
+$zindexTooltip: 1030 !default;
+$zindexFixedNavbar: 1030 !default;
+$zindexModalBackdrop: 1040 !default;
+$zindexModal: 1050 !default;
 
 // Sprite icons path
-// -------------------------
-$iconSpritePath:          "../img/glyphicons-halflings.png" !default;
-$iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png" !default;
 
+$iconSpritePath: "../img/glyphicons-halflings.png" !default;
+$iconWhiteSpritePath: "../img/glyphicons-halflings-white.png" !default;
 
 // Input placeholder text color
-// -------------------------
-$placeholderText:         $grayLight !default;
 
+$placeholderText: $grayLight !default;
 
 // Hr border color
-// -------------------------
-$hrBorder:                $grayLighter !default;
 
+$hrBorder: $grayLighter !default;
 
 // Horizontal forms & lists
-// -------------------------
-$horizontalComponentOffset:       180px !default;
 
+$horizontalComponentOffset: 180px !default;
 
 // Wells
-// -------------------------
+
 $wellBackground:                  #f5f5f5 !default;
 
 
