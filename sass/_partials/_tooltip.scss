@@ -71,6 +71,8 @@
 	position: absolute;
 	width: 0;
 	height: 0;
-	border-color: transparent;
-	border-style: solid;
+	border: {
+		color: transparent;
+		style: solid;
+	}
 }
