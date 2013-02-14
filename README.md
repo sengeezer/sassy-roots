@@ -24,7 +24,6 @@ Roots is my Wordpress base theme of choice, but I've made several changes to ref
 * These filenames can be modified at `lib/scripts.php`
 
 ## Installation
-* Clone repo: `git clone git://github.com/jaredhughes/sassy-roots.git`
 * Reference the [theme activation](/retlehs/roots/blob/master/doc/activation.md) documentation to understand everything that happens once you activate Roots
 
 ## Planned Features
