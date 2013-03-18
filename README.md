@@ -1,6 +1,9 @@
 # Sassy Roots
+###PLUS
 
-Roots is my Wordpress base theme of choice, but I've made several changes to reflect my personal workflow and preferences.
+Roots is [Jared Hughes'](https://github.com/jaredhughes/sassy-roots) base theme of choice.
+
+**This plus branch enhances the quality of the SASS.**
 
 ## Features
 * Bootstrap Less has been converted to Sass
