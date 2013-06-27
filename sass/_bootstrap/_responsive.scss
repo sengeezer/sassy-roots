@@ -11,25 +11,19 @@
 
 // Responsive
 // For phone and tablet devices
-// -------------------------------------------------------------
 
 
 // REPEAT VARIABLES & MIXINS
-// -------------------------
 // Required since we compile the responsive stuff separately
 
 @import "variables"; // Modify this for custom colors, font-sizes, etc
 @import "mixins";
 
-
 // RESPONSIVE CLASSES
-// ------------------
 
 @import "_lib/responsive-utilities";
 
-
 // MEDIA QUERIES
-// ------------------
 
 // Large desktops
 @import "_lib/responsive-1200px-min";
@@ -40,9 +34,7 @@
 // Phones to portrait tablets and narrow desktops
 @import "_lib/responsive-767px-max";
 
-
 // RESPONSIVE NAVBAR
-// ------------------
 
 // From 979px and below, show a button to toggle navbar contents
 @import "_lib/responsive-navbar";
