@@ -152,9 +152,7 @@
 }
 
 // Pills
-.nav-pills.nav-stacked > li > a {
-  margin-bottom: 3px;
-}
+.nav-pills.nav-stacked > li > a { margin-bottom: 3px; }
 .nav-pills.nav-stacked > li:last-child > a {
   margin-bottom: 1px; // decrease margin to match sizing of stacked tabs
 }
@@ -206,11 +204,24 @@
   background-color: $grayLight;
   border-color: $grayLight;
 }
+<<<<<<< HEAD
+.nav li.dropdown {
+  &.open,
+  &.open.active,
+  &.open a:hover,
+  &.open a:focus {
+    .caret {
+      border-top-color: $white;
+      border-bottom-color: $white;
+      @include opacity(100);
+    }
+=======
 .nav li.dropdown.open {
   .caret, &.active .caret, a:hover .caret, a:focus .caret {
     border-top-color: $white;
     border-bottom-color: $white;
     @include opacity(100);
+>>>>>>> 63e46d3e53940cd72131ff7ea5eb73c8c14fdbe0
   }
 }
 
@@ -225,7 +236,11 @@
 
 // Clear any floats
 .tabbable { @include clearfix(); }
+<<<<<<< HEAD
+.tab-content {
+=======
 .tab-content { 
+>>>>>>> 63e46d3e53940cd72131ff7ea5eb73c8c14fdbe0
   overflow: auto; // prevent content from running below tabs
 }
 
@@ -237,10 +252,17 @@
 // Show/hide tabbable areas
 .tab-content > .tab-pane,
 .pill-content > .pill-pane { display: none; }
+<<<<<<< HEAD
+
+.tab-content > .active,
+.pill-content > .active { display: block; }
+
+=======
 .tab-content, .pill-content {
   > .active { display: block; }
 }
 
+>>>>>>> 63e46d3e53940cd72131ff7ea5eb73c8c14fdbe0
 // BOTTOM
 
 .tabs-below > .nav-tabs {
@@ -264,18 +286,16 @@
 // LEFT & RIGHT
 
 // Common styles
-.tabs-left, .tabs-right {
-  > .nav-tabs > li {
-    float: none;
-    > a {
-      min-width: 74px;
-      margin-right: 0;
-      margin-bottom: 3px;
-    }
+.tabs-left > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+  float: none;
+  > a {
+    min-width: 74px;
+    margin-right: 0;
+    margin-bottom: 3px;
   }
 }
 
-// Tabs on the left
 .tabs-left > .nav-tabs {
   float: left;
   margin-right: 19px;
@@ -293,34 +313,39 @@
   }
 }
 
-// Tabs on the right
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: 19px;
   border-left: 1px solid #ddd;
-  > li > a {
-    margin-left: -1px;
-    @include border-radius(0 4px 4px 0);
-    &:hover, &:focus { border-color: $grayLighter $grayLighter $grayLighter #ddd; }
-  }
-  .active {
-    > a, > a:hover, > a:focus {
-      border-color: #ddd #ddd #ddd transparent;
-      *border-left-color: $white;
-    }
-  }
+}
+.tabs-right > .nav-tabs > li > a {
+  margin-left: -1px;
+  @include border-radius(0 4px 4px 0);
+}
+.tabs-right > .nav-tabs > li > a:hover,
+.tabs-right > .nav-tabs > li > a:focus {
+  border-color: $grayLighter $grayLighter $grayLighter #ddd;
+}
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus {
+  border-color: #ddd #ddd #ddd transparent;
+  *border-left-color: $white;
 }
 
+
+
 // DISABLED STATES
+// ---------------
 
 // Gray out text
 .nav > .disabled > a {
   color: $grayLight;
-  // Nuke hover/focus effects
-  &:hover, &:focus {
-    text-decoration: none;
-    background-color: transparent;
-    cursor: default;
-  }
 }
-
+// Nuke hover/focus effects
+.nav > .disabled > a:hover,
+.nav > .disabled > a:focus {
+  text-decoration: none;
+  background-color: transparent;
+  cursor: default;
+}
