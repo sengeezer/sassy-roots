@@ -159,10 +159,7 @@
   margin-bottom: 1px; // decrease margin to match sizing of stacked tabs
 }
 
-
-
 // DROPDOWNS
-// ---------
 
 .nav-tabs .dropdown-menu {
   @include border-radius(0 0 6px 6px); // remove the top rounded corners here since there is a hard edge above the menu
@@ -172,7 +169,6 @@
 }
 
 // Default dropdown links
-// -------------------------
 // Make carets use linkColor to start
 .nav .dropdown-toggle .caret {
   border-top-color: $linkColor;
@@ -184,13 +180,10 @@
   border-top-color: $linkColorHover;
   border-bottom-color: $linkColorHover;
 }
-/* move down carets for tabs */
-.nav-tabs .dropdown-toggle .caret {
-  margin-top: 8px;
-}
+// move down carets for tabs
+.nav-tabs .dropdown-toggle .caret { margin-top: 8px; }
 
 // Active dropdown links
-// -------------------------
 .nav .active .dropdown-toggle .caret {
   border-top-color: #fff;
   border-bottom-color: #fff;
@@ -201,14 +194,10 @@
 }
 
 // Active:hover/:focus dropdown links
-// -------------------------
 .nav > .dropdown.active > a:hover,
-.nav > .dropdown.active > a:focus {
-  cursor: pointer;
-}
+.nav > .dropdown.active > a:focus { cursor: pointer; }
 
 // Open dropdowns
-// -------------------------
 .nav-tabs .open .dropdown-toggle,
 .nav-pills .open .dropdown-toggle,
 .nav > li.dropdown.open.active > a:hover,
@@ -217,93 +206,72 @@
   background-color: $grayLight;
   border-color: $grayLight;
 }
-.nav li.dropdown.open .caret,
-.nav li.dropdown.open.active .caret,
-.nav li.dropdown.open a:hover .caret,
-.nav li.dropdown.open a:focus .caret {
-  border-top-color: $white;
-  border-bottom-color: $white;
-  @include opacity(100);
+.nav li.dropdown.open {
+  .caret, &.active .caret, a:hover .caret, a:focus .caret {
+    border-top-color: $white;
+    border-bottom-color: $white;
+    @include opacity(100);
+  }
 }
 
 // Dropdowns in stacked tabs
-.tabs-stacked .open > a:hover,
-.tabs-stacked .open > a:focus {
-  border-color: $grayLight;
+.tabs-stacked .open > a {
+  &:hover, &:focus { border-color: $grayLight; }
 }
-
-
 
 // TABBABLE
-// --------
-
 
 // COMMON STYLES
-// -------------
 
 // Clear any floats
-.tabbable {
-  @include clearfix();
-}
-.tab-content {
+.tabbable { @include clearfix(); }
+.tab-content { 
   overflow: auto; // prevent content from running below tabs
 }
 
 // Remove border on bottom, left, right
-.tabs-below > .nav-tabs,
-.tabs-right > .nav-tabs,
-.tabs-left > .nav-tabs {
-  border-bottom: 0;
+.tabs-below, .tabs-right, .tabs-left {
+  > .nav-tabs { border-bottom: 0; }
 }
 
 // Show/hide tabbable areas
 .tab-content > .tab-pane,
-.pill-content > .pill-pane {
-  display: none;
+.pill-content > .pill-pane { display: none; }
+.tab-content, .pill-content {
+  > .active { display: block; }
 }
-.tab-content > .active,
-.pill-content > .active {
-  display: block;
-}
-
 
 // BOTTOM
-// ------
 
 .tabs-below > .nav-tabs {
   border-top: 1px solid #ddd;
-}
-.tabs-below > .nav-tabs > li {
-  margin-top: -1px;
-  margin-bottom: 0;
-}
-.tabs-below > .nav-tabs > li > a {
-  @include border-radius(0 0 4px 4px);
-  &:hover,
-  &:focus {
-    border-bottom-color: transparent;
-    border-top-color: #ddd;
+  > li {
+    margin-top: -1px;
+    margin-bottom: 0;
+    > a {
+      @include border-radius(0 0 4px 4px);
+      &:hover, &:focus {
+        border-bottom-color: transparent;
+        border-top-color: #ddd;
+      }
+    }
   }
-}
-.tabs-below > .nav-tabs > .active > a,
-.tabs-below > .nav-tabs > .active > a:hover,
-.tabs-below > .nav-tabs > .active > a:focus {
-  border-color: transparent #ddd #ddd #ddd;
+  > .active {
+    > a, > a:hover, > a:focus { border-color: transparent #ddd #ddd #ddd; }
+  }
 }
 
 // LEFT & RIGHT
-// ------------
 
 // Common styles
 .tabs-left > .nav-tabs > li,
 .tabs-right > .nav-tabs > li {
   float: none;
-}
-.tabs-left > .nav-tabs > li > a,
-.tabs-right > .nav-tabs > li > a {
-  min-width: 74px;
-  margin-right: 0;
-  margin-bottom: 3px;
+  > a {
+    min-width: 74px;
+    margin-right: 0;
+    margin-bottom: 3px;
+  }
 }
 
 // Tabs on the left
