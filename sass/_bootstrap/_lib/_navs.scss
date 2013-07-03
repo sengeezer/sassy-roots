@@ -152,7 +152,9 @@
 }
 
 // Pills
-.nav-pills.nav-stacked > li > a { margin-bottom: 3px; }
+.nav-pills.nav-stacked > li > a {
+  margin-bottom: 3px;
+}
 .nav-pills.nav-stacked > li:last-child > a {
   margin-bottom: 1px; // decrease margin to match sizing of stacked tabs
 }
@@ -193,9 +195,7 @@
 
 // Active:hover/:focus dropdown links
 .nav > .dropdown.active > a:hover,
-.nav > .dropdown.active > a:focus {
-  cursor: pointer;
-}
+.nav > .dropdown.active > a:focus { cursor: pointer; }
 
 // Open dropdowns
 .nav-tabs .open .dropdown-toggle,
@@ -206,16 +206,11 @@
   background-color: $grayLight;
   border-color: $grayLight;
 }
-.nav li.dropdown {
-  &.open,
-  &.open.active,
-  &.open a:hover,
-  &.open a:focus {
-    .caret {
-      border-top-color: $white;
-      border-bottom-color: $white;
-      @include opacity(100);
-    }
+.nav li.dropdown.open {
+  .caret, &.active .caret, a:hover .caret, a:focus .caret {
+    border-top-color: $white;
+    border-bottom-color: $white;
+    @include opacity(100);
   }
 }
 
@@ -230,7 +225,7 @@
 
 // Clear any floats
 .tabbable { @include clearfix(); }
-.tab-content {
+.tab-content { 
   overflow: auto; // prevent content from running below tabs
 }
 
@@ -242,9 +237,9 @@
 // Show/hide tabbable areas
 .tab-content > .tab-pane,
 .pill-content > .pill-pane { display: none; }
-
-.tab-content > .active,
-.pill-content > .active { display: block; }
+.tab-content, .pill-content {
+  > .active { display: block; }
+}
 
 // BOTTOM
 
@@ -279,23 +274,28 @@
   }
 }
 
+// Tabs on the left
 .tabs-left > .nav-tabs {
   float: left;
   margin-right: 19px;
   border-right: 1px solid #ddd;
-  > li > a {
-    margin-right: -1px;
-    @include border-radius(4px 0 0 4px);
-    &:hover, &:focus { border-color: $grayLighter #ddd $grayLighter $grayLighter; }
-  }
-  .active {
-    > a, > a:hover, > a:focus {
-      border-color: #ddd transparent #ddd #ddd;
-      *border-right-color: $white;
-    }
-  }
+}
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  @include border-radius(4px 0 0 4px);
+}
+.tabs-left > .nav-tabs > li > a:hover,
+.tabs-left > .nav-tabs > li > a:focus {
+  border-color: $grayLighter #ddd $grayLighter $grayLighter;
+}
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #ddd transparent #ddd #ddd;
+  *border-right-color: $white;
 }
 
+// Tabs on the right
 .tabs-right > .nav-tabs {
   float: right;
   margin-left: 19px;
