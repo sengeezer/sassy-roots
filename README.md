@@ -27,7 +27,6 @@ Roots is [Jared Hughes'](https://github.com/jaredhughes/sassy-roots) base theme 
 * These filenames can be modified at `lib/scripts.php`
 
 ## Installation
-* Clone repo: `git clone git://github.com/jaredhughes/sassy-roots.git`
 * Reference the [theme activation](/retlehs/roots/blob/master/doc/activation.md) documentation to understand everything that happens once you activate Roots
 
 ## Planned Features
