@@ -1,33 +1,19 @@
 //
 // Responsive: Navbar
-// --------------------------------------------------
 
+@import "compass/css3";
 
 // TABLETS AND BELOW
-// -----------------
 @media (max-width: $navbarCollapseWidth) {
-
   // UNFIX THE TOPBAR
-  // ----------------
   // Remove any padding from the body
-  body {
-    padding-top: 0;
-  }
+  body { padding-top: 0; }
   // Unfix the navbars
-  .navbar-fixed-top,
-  .navbar-fixed-bottom {
-    position: static;
-  }
-  .navbar-fixed-top {
-    margin-bottom: $baseLineHeight;
-  }
-  .navbar-fixed-bottom {
-    margin-top: $baseLineHeight;
-  }
+  .navbar-fixed-top, .navbar-fixed-bottom { position: static; }
+  .navbar-fixed-top { margin-bottom: $baseLineHeight; }
+  .navbar-fixed-bottom { margin-top: $baseLineHeight; }
   .navbar-fixed-top .navbar-inner,
-  .navbar-fixed-bottom .navbar-inner {
-    padding: 5px;
-  }
+  .navbar-fixed-bottom .navbar-inner { padding: 5px; }
   .navbar .container {
     width: auto;
     padding: 0;
@@ -38,48 +24,40 @@
     padding-right: 10px;
     margin: 0 0 0 -5px;
   }
-
   // COLLAPSIBLE NAVBAR
-  // ------------------
   // Nav collapse clears brand
   .nav-collapse {
     clear: both;
+    // Block-level the nav
+    .nav {
+      float: none;
+      margin: 0 0 ($baseLineHeight / 2);
+      > li {
+        float: none;
+        > a { margin-bottom: 2px; }
+      }
+      > .divider-vertical { display: none; }
+      .nav-header {
+        color: $navbarText;
+        @include text-shadow(none);
+      }
+    }
+    // Nav and dropdown links in navbar
+    .nav > li > a, .dropdown-menu a {
+      padding: 9px 15px;
+      font-weight: bold;
+      color: $navbarLinkColor;
+      @include border-radius(3px);
+    }
+    // Buttons
+    .btn {
+      padding: 4px 10px 4px;
+      font-weight: normal;
+      @include border-radius($baseBorderRadius);
+    }
   }
-  // Block-level the nav
-  .nav-collapse .nav {
-    float: none;
-    margin: 0 0 ($baseLineHeight / 2);
-  }
-  .nav-collapse .nav > li {
-    float: none;
-  }
-  .nav-collapse .nav > li > a {
-    margin-bottom: 2px;
-  }
-  .nav-collapse .nav > .divider-vertical {
-    display: none;
-  }
-  .nav-collapse .nav .nav-header {
-    color: $navbarText;
-    text-shadow: none;
-  }
-  // Nav and dropdown links in navbar
-  .nav-collapse .nav > li > a,
-  .nav-collapse .dropdown-menu a {
-    padding: 9px 15px;
-    font-weight: bold;
-    color: $navbarLinkColor;
-    @include border-radius(3px);
-  }
-  // Buttons
-  .nav-collapse .btn {
-    padding: 4px 10px 4px;
-    font-weight: normal;
-    @include border-radius($baseBorderRadius);
-  }
-  .nav-collapse .dropdown-menu li + li a {
-    margin-bottom: 2px;
-  }
+  
+  .nav-collapse .dropdown-menu li + li a { margin-bottom: 2px; }
   .nav-collapse .nav > li > a:hover,
   .nav-collapse .nav > li > a:focus,
   .nav-collapse .dropdown-menu a:hover,
