@@ -35,6 +35,8 @@ $sansFontFamily:     "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $serifFontFamily:    Georgia, "Times New Roman", Times, serif !default;
 $monoFontFamily:     Monaco, Menlo, Consolas, "Courier New", monospace !default;
 
+// Other headings font family: contrails
+
 $baseFontSize:       14px !default;
 $baseFontFamily:     $sansFontFamily !default;
 $baseLineHeight:     20px !default;
@@ -42,8 +44,7 @@ $altFontFamily:      $serifFontFamily !default;
 
 $headingsFontFamily: inherit !default; // empty to use BS default, $baseFontFamily
 $headingsFontWeight: bold !default;    // instead of browser default, bold
-$headingsColor:      inherit !default; // empty to use BS default, $textColor
-
+$headingsColor:      #575353 !default; // empty to use BS default, $textColor
 
 // Component sizing
 // Based on 14px font-size and 20px line-height
@@ -155,7 +156,7 @@ $navbarLinkColorActive:      $gray !default;
 $navbarLinkBackgroundHover:  transparent !default;
 $navbarLinkBackgroundActive: darken($navbarBackground, 5%) !default;
 
-$navbarBrandColor:           $navbarLinkColor !default;
+$navbarBrandColor:           #1a6e24 !default;
 
 // Inverted navbar
 $navbarInverseBackground:             #111 !default;
@@ -174,7 +175,7 @@ $navbarInverseSearchBackgroundFocus:  $white !default;
 $navbarInverseSearchBorder:           $navbarInverseBackground !default;
 $navbarInverseSearchPlaceholderColor: #ccc !default;
 
-$navbarInverseBrandColor:             $navbarInverseLinkColor !default;
+$navbarInverseBrandColor:             #2cc939 !default;
 
 // Pagination
 $paginationBackground:       #fff !default;
@@ -182,9 +183,9 @@ $paginationBorder:           #ddd !default;
 $paginationActiveBackground: #f5f5f5 !default;
 
 // Hero unit
-$heroUnitBackground:   $grayLighter !default;
-$heroUnitHeadingColor: inherit !default;
-$heroUnitLeadColor:    inherit !default;
+$heroUnitBackground:   #3a3670 !default;
+$heroUnitHeadingColor: #fff !default;
+$heroUnitLeadColor:    #fff !default;
 
 // Form states and alerts
 $warningText:       #c09853 !default;
@@ -205,7 +206,7 @@ $infoBorder:        darken(adjust-hue($infoBackground, -10), 7%) !default;
 
 // Tooltips and popovers
 $tooltipColor:           #fff !default;
-$tooltipBackground:      #000 !default;
+$tooltipBackground:      #333 !default;
 $tooltipArrowWidth:      5px !default;
 $tooltipArrowColor:      $tooltipBackground !default;
 
