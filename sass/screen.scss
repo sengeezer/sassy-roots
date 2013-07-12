@@ -19,7 +19,12 @@ body { }
 
 /* Sidebar */
 
-.sidebar { }
+.sidebar {}
+aside#sidebar {
+	section.widget.search-2 {
+		margin-top:25px;
+	}
+}
 
 /* Posts */
 
