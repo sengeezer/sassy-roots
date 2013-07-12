@@ -46,11 +46,6 @@ $headingsFontFamily: inherit !default; // empty to use BS default, $baseFontFami
 $headingsFontWeight: bold !default;    // instead of browser default, bold
 $headingsColor:      #575353 !default; // empty to use BS default, $textColor
 
-// to include
-$heroUnitBackground: #3a3670;
-$heroUnitHeadingColor: #fff;
-$heroUnitLeadColor: $heroUnitHeadingColor;
-
 // Component sizing
 // Based on 14px font-size and 20px line-height
 $fontSizeLarge:     $baseFontSize * 1.25 !default; // ~18px
@@ -188,9 +183,9 @@ $paginationBorder:           #ddd !default;
 $paginationActiveBackground: #f5f5f5 !default;
 
 // Hero unit
-$heroUnitBackground:   $grayLighter !default;
-$heroUnitHeadingColor: inherit !default;
-$heroUnitLeadColor:    inherit !default;
+$heroUnitBackground:   #3a3670 !default;
+$heroUnitHeadingColor: #fff !default;
+$heroUnitLeadColor:    #fff !default;
 
 // Form states and alerts
 $warningText:       #c09853 !default;
