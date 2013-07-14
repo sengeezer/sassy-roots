@@ -28,6 +28,10 @@ aside#sidebar {
 
 /* Posts */
 
+article {
+	margin-bottom: 25px;
+}
+
 .hentry {
    header { }
    time { }
@@ -39,6 +43,17 @@ aside#sidebar {
 /* Footer */
 
 .content-info { }
+
+footer .widget_meta ul {
+	list-style:none;
+	padding-left:0;
+	margin-left:0;
+	li {
+		float:left;
+		padding-right:25px;
+	}
+	@include clearfix();
+}
 
 /* WordPress Generated Classes (See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes ) */
 
